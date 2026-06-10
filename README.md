@@ -25,7 +25,13 @@ O objetivo é garantir a conformidade dos requisitos de negócio, identificar co
 https://bugbank.netlify.app/#
 
 ---
+---
 
+## Casos de Testes
+
+https://docs.google.com/spreadsheets/d/1k7hAhhY0tHLouttQk2l6wm0uwRwIhxa7ohY9yC9ZpjU/edit?usp=sharing
+
+---
 ## Metodologias e Ferramentas
 
 * Behavior Driven Development (BDD)
