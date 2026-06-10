@@ -12,16 +12,11 @@ assignees: ''
 * **Cenário:** *Descreva brevemente o objetivo deste teste.*
 
 ## ⚙️ BDD (Passo a Passo)
-> **Dado** > **Quando** > **Então** > **E** ## ✅ Resultado Esperado
+> **Dado** > **Quando** > **Então** > **E**
+
+## ✅ Resultado Esperado
 *O que o sistema deve fazer ao final do teste?*
 
 ---
-
-## 🚀 Status de Execução
-
-- [ ] **Pendente:** 
-- [ ] **Passou (Passed):** 
-- [ ] **Falhou (Failed):** 
-- [ ] **Bloqueado (Blocked):** 
 
 ## 📎 Evidências (Opcional)
