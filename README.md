@@ -107,9 +107,20 @@ https://docs.google.com/spreadsheets/d/1k7hAhhY0tHLouttQk2l6wm0uwRwIhxa7ohY9yC9Z
 | BUG-004 | Pode ser cadastrado duas contas com o mesmo email e a nova conta substitui a conta atual alterando seu saldo. | Alta| Aberto |
 | BUG-005 | Após criar uma conta, ao clicar em "registrar" os dados ainda continuam salvos no formulário| Média| Aberto |
 | BUG-006 | Os campos Nome, Email, Senha e Confirmação de senha são de preenchimento obrigatório. O campo Nome não está em preenchimento obrigatório| Alta| Aberto |
+| BUG-007 | O switch **"Criar conta com saldo?"** apresenta falha de interação. Ao clicar diretamente no botão deslizante (bolinha), nenhuma ação é executada. A alteração do estado ocorre apenas ao clicar na área vazia ao lado do componente. O comportamento esperado é que toda a área do switch, incluindo o botão deslizante, seja clicável. | Média      | Aberto |
+| BUG-008 | A seta de retorno localizada na tela de cadastro não redireciona o usuário para a tela de login. Ao clicar no ícone, nenhuma ação é executada. O comportamento esperado é que o usuário seja direcionado para a tela de login. | Alta       | Aberto |
+
 
 ---
 
+## Observações
+* Tentativa de cadastro sem preencher email deve visualizar a mensagem "Email não pode ser vazio"
+
+* Tentativa de cadastro sem preencher senha deve visualizar a mensagem "Senha não pode ser vazio"
+
+* Tentativa de cadastro sem preencher confirmação de senha deve visualizar a mensagem "Confirmar senha não pode ser vazio"
+
+---
 ## Cobertura de Testes
 
 * ✅ Login
