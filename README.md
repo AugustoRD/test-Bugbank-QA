@@ -105,6 +105,7 @@ https://docs.google.com/spreadsheets/d/1k7hAhhY0tHLouttQk2l6wm0uwRwIhxa7ohY9yC9Z
 | BUG-002 | O formulário de transferência aceita a submissão do formulário com o campo "Descrição" vazio, porém o campo é obrigatório de acordo com a documentação do requisito. Entretanto na documentação do Extrato diz que transações sem comentários/descrição devem exibir "(-)", contradizendo a documentação anterior. | Média | Aberto |
 | BUG-003 | Após toda realização de transferência com sucesso o usuário deveria ser redireciona à página de extrato, entretanto o redirecionamento não ocorre com a ação é realizada. | Alta | Aberto |
 | BUG-004 | Pode ser cadastrado duas contas com o mesmo email e a nova conta substitui a conta atual alterando seu saldo. | Alta| Aberto |
+| BUG-005 | Após criar uma conta, ao clicar em "registrar" os dados ainda continuam salvos no formulário| Média| Aberto |
 
 ---
 
