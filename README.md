@@ -71,7 +71,7 @@ https://docs.google.com/spreadsheets/d/1k7hAhhY0tHLouttQk2l6wm0uwRwIhxa7ohY9yC9Z
 
 ---
 
-### US043 - Transferência
+### US03 - Transferência
 
 | ID     | Cenário                              |
 | ------ | ------------------------------------ |
