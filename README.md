@@ -69,31 +69,19 @@ https://docs.google.com/spreadsheets/d/1k7hAhhY0tHLouttQk2l6wm0uwRwIhxa7ohY9yC9Z
 
 ---
 
-### US03 - Extrato
-
-| ID     | Cenário                                      |
-| ------ | -------------------------------------------- |
-| CT-011 | Visualizar extrato                           |
-| CT-012 | Acessar página de extratos                   |
-| CT-013 | Exibir saldo disponível                      |
-| CT-014 | Exibir histórico das transações              |
-| CT-015 | Identificar valores de saída                 |
-| CT-016 | Identificar valores de entrada               |
-| CT-017 | Exibir indicador para ausência de comentário |
-
 ---
 
-### US04 - Transferência
+### US043 - Transferência
 
 | ID     | Cenário                              |
 | ------ | ------------------------------------ |
-| CT-018 | Transferência realizada com sucesso  |
-| CT-019 | Transferência com valor inválido     |
-| CT-020 | Transferência com saldo insuficiente |
-| CT-021 | Validação dos campos conta e dígito  |
-| CT-022 | Transferência com descrição vazia    |
-| CT-023 | Transferência para conta inexistente |
-| CT-024 | Auto-transferência                   |
+| CT-011 | Transferência realizada com sucesso  |
+| CT-012 | Transferência com valor inválido     |
+| CT-013 | Transferência com saldo insuficiente |
+| CT-014 | Validação dos campos conta e dígito  |
+| CT-015 | Transferência com descrição vazia    |
+| CT-016 | Transferência para conta inexistente |
+| CT-017 | Auto-transferência                   |
 
 ---
 
@@ -125,10 +113,9 @@ https://docs.google.com/spreadsheets/d/1k7hAhhY0tHLouttQk2l6wm0uwRwIhxa7ohY9yC9Z
 
 * ✅ Login
 * ✅ Cadastro
-* ✅ Extrato
 * ✅ Transferência
 
-**Total de Casos de Teste:** 24
+**Total de Casos de Teste:** 17
 
 ---
 
