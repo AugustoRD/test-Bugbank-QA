@@ -26,7 +26,7 @@ export class TransferPage {
     }
 
      async gotoTransferPage() {
-        await this.homeTransferButton.click();
+       await this.page.goto('https://bugbank.netlify.app/transfer');
     }
 
     async fillTransferForm(accountNumber: string, digitAccount: string, transferValue: string, transferDescription: string) {
