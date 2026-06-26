@@ -1,10 +1,10 @@
-# BugBank - Testes Funcionais e BDD
+# BugBank - Testes Funcionais, BDD e Testes Automatizados
 
 ## Sobre o Projeto
 
-Este repositório reúne os artefatos de teste elaborados para a aplicação **BugBank**, com foco na validação funcional das principais funcionalidades do sistema por meio da abordagem **BDD (Behavior Driven Development)**.
+Este repositório reúne os artefatos de teste elaborados para a aplicação **BugBank**, com foco na validação funcional das principais funcionalidades do sistema por meio da abordagem **BDD (Behavior Driven Development)** e também através de **testes automatizados com Playwright**.
 
-O objetivo é garantir a conformidade dos requisitos de negócio, identificar comportamentos inesperados e documentar evidências que contribuam para a qualidade do produto.
+O objetivo é garantir a conformidade dos requisitos de negócio, identificar comportamentos inesperados, automatizar fluxos críticos e documentar evidências que contribuam para a qualidade do produto.
 
 ---
 
@@ -14,7 +14,9 @@ O objetivo é garantir a conformidade dos requisitos de negócio, identificar co
 - Elaborar cenários de teste utilizando Gherkin;
 - Identificar defeitos e inconsistências nos requisitos;
 - Documentar resultados esperados e obtidos;
-- Aplicar práticas de Quality Assurance (QA) em testes manuais.
+- Aplicar práticas de Quality Assurance (QA);
+- Implementar testes automatizados de interface com Playwright;
+- Garantir maior confiabilidade e regressão automatizada dos cenários críticos.
 
 ---
 
@@ -23,8 +25,6 @@ O objetivo é garantir a conformidade dos requisitos de negócio, identificar co
 **BugBank**
 
 https://bugbank.netlify.app/#
-
----
 
 ---
 
@@ -39,6 +39,8 @@ https://docs.google.com/spreadsheets/d/1k7hAhhY0tHLouttQk2l6wm0uwRwIhxa7ohY9yC9Z
 - Behavior Driven Development (BDD)
 - Linguagem Gherkin
 - Testes Funcionais Manuais
+- Testes Automatizados de Interface com Playwright
+- Page Object Model (POM)
 - Análise de Requisitos
 - Elaboração de Casos de Teste
 - Git e GitHub
@@ -49,12 +51,18 @@ https://docs.google.com/spreadsheets/d/1k7hAhhY0tHLouttQk2l6wm0uwRwIhxa7ohY9yC9Z
 
 ### US01 - Login
 
-| ID     | Cenário                              |
-| ------ | ------------------------------------ |
-| CT-001 | Login com credenciais válidas        |
-| CT-002 | Login com formato de e-mail inválido |
-| CT-003 | Login com senha inválida             |
-| CT-004 | Login com e-mail não cadastrado      |
+| ID       | Cenário                              |
+| -------- | ------------------------------------ |
+| CT-001   | Login com credenciais válidas        |
+| CT-002   | Login com formato de e-mail inválido |
+| CT-003   | Login com senha inválida             |
+| CT-004   | Login com e-mail não cadastrado      |
+| ID       | Cenário                              |
+| -------- | ------------------------------------ |
+| CT-001   | Login com credenciais válidas        |
+| CT-002   | Login com formato de e-mail inválido |
+| CT-003   | Login com senha inválida             |
+| CT-004   | Login com e-mail não cadastrado      |
 
 ---
 
@@ -68,8 +76,6 @@ https://docs.google.com/spreadsheets/d/1k7hAhhY0tHLouttQk2l6wm0uwRwIhxa7ohY9yC9Z
 | CT-008 | E-mail inválido                    |
 | CT-009 | Nome inválido                      |
 | CT-010 | Exibição do número da conta criada |
-
----
 
 ---
 
@@ -87,36 +93,51 @@ https://docs.google.com/spreadsheets/d/1k7hAhhY0tHLouttQk2l6wm0uwRwIhxa7ohY9yC9Z
 
 ---
 
+## Automação de Testes
+
+Além dos testes manuais, foi implementado um conjunto de **testes automatizados utilizando Playwright**, cobrindo os principais fluxos críticos da aplicação BugBank.
+
+Os testes automatizados incluem:
+
+- Cadastro de usuários via interface;
+- Login com validação de autenticação;
+- Transferência entre contas;
+- Validação de regras de negócio (saldo insuficiente, valores inválidos e contas inexistentes);
+- Verificação de mensagens de erro e sucesso;
+- Regressão automatizada dos cenários principais.
+
+---
+
 ## Defeitos Identificados
 
-| ID      | Descrição                                                                                                                                                                                                                                                                                                                                | Severidade | Status |
-| :------ | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------- | :----- |
-| BUG-001 | O campo "Número da conta" e "Dígito" do formulário de transferência estão aceitando outros tipos de caracteres não numéricos. De acordo com o requisito deveriam aceitar apenas números.                                                                                                                                                 | Alta       | Aberto |
-| BUG-002 | O formulário de transferência aceita a submissão do formulário com o campo "Descrição" vazio, porém o campo é obrigatório de acordo com a documentação do requisito. Entretanto na documentação do Extrato diz que transações sem comentários/descrição devem exibir "(-)", contradizendo a documentação anterior.                       | Média      | Aberto |
-| BUG-003 | Após toda realização de transferência com sucesso o usuário deveria ser redireciona à página de extrato, entretanto o redirecionamento não ocorre com a ação é realizada.                                                                                                                                                                | Alta       | Aberto |
-| BUG-004 | Pode ser cadastrado duas contas com o mesmo email e a nova conta substitui a conta atual alterando seu saldo.                                                                                                                                                                                                                            | Alta       | Aberto |
-| BUG-005 | Após criar uma conta, ao clicar em "registrar" os dados ainda continuam salvos no formulário                                                                                                                                                                                                                                             | Média      | Aberto |
-| BUG-006 | Os campos Nome, Email, Senha e Confirmação de senha são de preenchimento obrigatório. O campo Nome não está em preenchimento obrigatório                                                                                                                                                                                                 | Alta       | Aberto |
-| BUG-007 | O switch **"Criar conta com saldo?"** apresenta falha de interação. Ao clicar diretamente no botão deslizante (bolinha), nenhuma ação é executada. A alteração do estado ocorre apenas ao clicar na área vazia ao lado do componente. O comportamento esperado é que toda a área do switch, incluindo o botão deslizante, seja clicável. | Média      | Aberto |
-| BUG-008 | A seta de retorno localizada na tela de cadastro não redireciona o usuário para a tela de login. Ao clicar no ícone, nenhuma ação é executada. O comportamento esperado é que o usuário seja direcionado para a tela de login.                                                                                                           | Alta       | Aberto |
+| ID      | Descrição                                                             | Severidade | Status |
+| ------- | --------------------------------------------------------------------- | ---------- | ------ |
+| BUG-001 | O campo "Número da conta" e "Dígito" aceita caracteres não numéricos. | Alta       | Aberto |
+| BUG-002 | Transferência aceita descrição vazia contrariando requisitos.         | Média      | Aberto |
+| BUG-003 | Não há redirecionamento para extrato após transferência.              | Alta       | Aberto |
+| BUG-004 | Permite criação de contas com mesmo e-mail.                           | Alta       | Aberto |
+| BUG-005 | Formulário mantém dados após cadastro.                                | Média      | Aberto |
+| BUG-006 | Campo Nome não é obrigatório.                                         | Alta       | Aberto |
+| BUG-007 | Switch de saldo não funciona corretamente ao clicar no toggle.        | Média      | Aberto |
+| BUG-008 | Ícone de voltar não redireciona para login.                           | Alta       | Aberto |
 
 ---
 
 ## Observações
 
-- Tentativa de cadastro sem preencher email deve visualizar a mensagem "Email não pode ser vazio"
-
-- Tentativa de cadastro sem preencher senha deve visualizar a mensagem "Senha não pode ser vazio"
-
-- Tentativa de cadastro sem preencher confirmação de senha deve visualizar a mensagem "Confirmar senha não pode ser vazio"
+- Tentativa de cadastro sem preencher email deve visualizar "Email não pode ser vazio"
+- Tentativa de cadastro sem preencher senha deve visualizar "Senha não pode ser vazio"
+- Tentativa de cadastro sem preencher confirmação de senha deve visualizar "Confirmar senha não pode ser vazio"
 
 ---
 
 ## Cobertura de Testes
 
-- ✅ Login
-- ✅ Cadastro
-- ✅ Transferência
+- Testes Manuais (BDD)
+- Testes Automatizados (Playwright)
+- Login
+- Cadastro
+- Transferência
 
 **Total de Casos de Teste:** 17
 
@@ -124,26 +145,36 @@ https://docs.google.com/spreadsheets/d/1k7hAhhY0tHLouttQk2l6wm0uwRwIhxa7ohY9yC9Z
 
 ## Equipe
 
-| Integrante | Papel      |
-| ---------- | ---------- |
-| Augusto    | QA Analyst |
-| Joyce      | QA Analyst |
-| Marcos     | QA Analyst |
+| Integrante   | Papel      |
+| ------------ | ---------- |
+| Augusto      | QA Analyst |
+| Joyce        | QA Analyst |
+| Marcos       | QA Analyst |
+| Integrante   | Papel      |
+| ------------ | -------    |
+| Augusto      | QA Analyst |
+| Joyce        | QA Analyst |
+| Marcos       | QA Analyst |
 
 ---
 
 ## Boas Práticas Aplicadas
 
-- Escrita de cenários em Gherkin;
-- Validação de fluxos positivos e negativos;
-- Definição de resultados esperados;
-- Rastreabilidade entre requisitos e casos de teste;
-- Registro de defeitos encontrados;
-- Organização por User Stories;
-- Documentação orientada à qualidade.
+- Escrita de cenários em Gherkin
+- Validação de fluxos positivos e negativos
+- Definição de resultados esperados
+- Rastreabilidade entre requisitos e casos de teste
+- Registro de defeitos encontrados
+- Organização por User Stories
+- Documentação orientada à qualidade
+- Implementação de testes automatizados com Playwright
+- Uso do padrão Page Object Model (POM)
+- Separação entre testes manuais e automatizados
 
 ---
 
 ## Objetivo Acadêmico
 
-Projeto desenvolvido para fins de estudo e aprimoramento das práticas de **Quality Assurance (QA)**, abrangendo análise de requisitos, elaboração de casos de teste e aplicação da metodologia BDD para validação funcional da aplicação BugBank.
+Projeto desenvolvido para fins de estudo e aprimoramento das práticas de Quality Assurance (QA), incluindo análise de requisitos, elaboração de casos de teste e aplicação de BDD, além da automação de testes funcionais com Playwright.
+
+Os testes automatizados cobrem os principais fluxos críticos: login, cadastro e transferência.
