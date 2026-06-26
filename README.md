@@ -51,24 +51,30 @@ https://docs.google.com/spreadsheets/d/1k7hAhhY0tHLouttQk2l6wm0uwRwIhxa7ohY9yC9Z
 
 ### US01 - Login
 
-| ID     | Cenário                              |
-|--------|------------------------------------|
-| CT-001 | Login com credenciais válidas      |
-| CT-002 | Login com formato de e-mail inválido |
-| CT-003 | Login com senha inválida           |
-| CT-004 | Login com e-mail não cadastrado    |
+| ID       | Cenário                              |
+| -------- | ------------------------------------ |
+| CT-001   | Login com credenciais válidas        |
+| CT-002   | Login com formato de e-mail inválido |
+| CT-003   | Login com senha inválida             |
+| CT-004   | Login com e-mail não cadastrado      |
+| ID       | Cenário                              |
+| -------- | ------------------------------------ |
+| CT-001   | Login com credenciais válidas        |
+| CT-002   | Login com formato de e-mail inválido |
+| CT-003   | Login com senha inválida             |
+| CT-004   | Login com e-mail não cadastrado      |
 
 ---
 
 ### US02 - Cadastro
 
-| ID     | Cenário                         |
-|--------|--------------------------------|
-| CT-005 | Cadastro com saldo inicial     |
-| CT-006 | Cadastro sem saldo inicial     |
-| CT-007 | Confirmação de senha divergente |
-| CT-008 | E-mail inválido               |
-| CT-009 | Nome inválido                 |
+| ID     | Cenário                            |
+| ------ | ---------------------------------- |
+| CT-005 | Cadastro com saldo inicial         |
+| CT-006 | Cadastro sem saldo inicial         |
+| CT-007 | Confirmação de senha divergente    |
+| CT-008 | E-mail inválido                    |
+| CT-009 | Nome inválido                      |
 | CT-010 | Exibição do número da conta criada |
 
 ---
@@ -76,14 +82,14 @@ https://docs.google.com/spreadsheets/d/1k7hAhhY0tHLouttQk2l6wm0uwRwIhxa7ohY9yC9Z
 ### US03 - Transferência
 
 | ID     | Cenário                              |
-|--------|------------------------------------|
-| CT-011 | Transferência realizada com sucesso |
-| CT-012 | Transferência com valor inválido   |
+| ------ | ------------------------------------ |
+| CT-011 | Transferência realizada com sucesso  |
+| CT-012 | Transferência com valor inválido     |
 | CT-013 | Transferência com saldo insuficiente |
-| CT-014 | Validação dos campos conta e dígito |
-| CT-015 | Transferência com descrição vazia  |
+| CT-014 | Validação dos campos conta e dígito  |
+| CT-015 | Transferência com descrição vazia    |
 | CT-016 | Transferência para conta inexistente |
-| CT-017 | Auto-transferência                 |
+| CT-017 | Auto-transferência                   |
 
 ---
 
@@ -104,16 +110,16 @@ Os testes automatizados incluem:
 
 ## Defeitos Identificados
 
-| ID | Descrição | Severidade | Status |
-|----|----------|------------|--------|
-| BUG-001 | O campo "Número da conta" e "Dígito" aceita caracteres não numéricos. | Alta | Aberto |
-| BUG-002 | Transferência aceita descrição vazia contrariando requisitos. | Média | Aberto |
-| BUG-003 | Não há redirecionamento para extrato após transferência. | Alta | Aberto |
-| BUG-004 | Permite criação de contas com mesmo e-mail. | Alta | Aberto |
-| BUG-005 | Formulário mantém dados após cadastro. | Média | Aberto |
-| BUG-006 | Campo Nome não é obrigatório. | Alta | Aberto |
-| BUG-007 | Switch de saldo não funciona corretamente ao clicar no toggle. | Média | Aberto |
-| BUG-008 | Ícone de voltar não redireciona para login. | Alta | Aberto |
+| ID      | Descrição                                                             | Severidade | Status |
+| ------- | --------------------------------------------------------------------- | ---------- | ------ |
+| BUG-001 | O campo "Número da conta" e "Dígito" aceita caracteres não numéricos. | Alta       | Aberto |
+| BUG-002 | Transferência aceita descrição vazia contrariando requisitos.         | Média      | Aberto |
+| BUG-003 | Não há redirecionamento para extrato após transferência.              | Alta       | Aberto |
+| BUG-004 | Permite criação de contas com mesmo e-mail.                           | Alta       | Aberto |
+| BUG-005 | Formulário mantém dados após cadastro.                                | Média      | Aberto |
+| BUG-006 | Campo Nome não é obrigatório.                                         | Alta       | Aberto |
+| BUG-007 | Switch de saldo não funciona corretamente ao clicar no toggle.        | Média      | Aberto |
+| BUG-008 | Ícone de voltar não redireciona para login.                           | Alta       | Aberto |
 
 ---
 
@@ -139,11 +145,16 @@ Os testes automatizados incluem:
 
 ## Equipe
 
-| Integrante | Papel |
-|------------|-------|
-| Augusto    | QA Analyst |
-| Joyce      | QA Analyst |
-| Marcos     | QA Analyst |
+| Integrante   | Papel      |
+| ------------ | ---------- |
+| Augusto      | QA Analyst |
+| Joyce        | QA Analyst |
+| Marcos       | QA Analyst |
+| Integrante   | Papel      |
+| ------------ | -------    |
+| Augusto      | QA Analyst |
+| Joyce        | QA Analyst |
+| Marcos       | QA Analyst |
 
 ---
 
