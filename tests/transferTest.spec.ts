@@ -59,7 +59,7 @@ test.describe('Transfer', () => {
         await expect(transferPage.modalText).toBeVisible();
         await expect(transferPage.modalText).toHaveText(/realizada com sucesso/); 
         await transferPage.closeModalButton.click();
-        await expect(transferPage.gotoExtractPage());
+        await expect(page).toHaveURL('https://bugbank.netlify.app/bank-statement');
         await expect(transferPage.extractValue).toHaveText(/100,00/);
      });
 
