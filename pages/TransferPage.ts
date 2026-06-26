@@ -10,6 +10,7 @@ export class TransferPage {
     readonly modalText: Locator;
     readonly closeModalButton: Locator;
     readonly homeTransferButton: Locator;
+    readonly extractValue: Locator;
     
 
     constructor(page: Page) {
@@ -22,11 +23,16 @@ export class TransferPage {
         this.modalText = page.locator('#modalText');
         this.closeModalButton = page.locator('#btnCloseModal');
         this.homeTransferButton = page.locator('#btn-TRANSFERÊNCIA');
+        this.extractValue = page.locator('#textTransferValue');
 
     }
 
      async gotoTransferPage() {
        await this.homeTransferButton.click();;
+    }
+
+    async gotoExtractPage() {
+        await this.page.goto('https://bugbank.netlify.app/bank-statement');
     }
 
     async fillTransferForm(accountNumber: string, digitAccount: string, transferValue: string, transferDescription: string) {

@@ -59,6 +59,8 @@ test.describe('Transfer', () => {
         await expect(transferPage.modalText).toBeVisible();
         await expect(transferPage.modalText).toHaveText(/realizada com sucesso/); 
         await transferPage.closeModalButton.click();
+        await expect(transferPage.gotoExtractPage());
+        await expect(transferPage.extractValue).toHaveText(/100,00/);
      });
 
     test('Transfer denied due to zero value', async ({page}) => {
